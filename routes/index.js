@@ -1,0 +1,33 @@
+var express = require('express');
+var router = express.Router();
+
+const wordList = [
+  {'id': 1, 'term': 'Docker', 'Description': 'Open platform for developing and running applications', 'reference':'Docker (2020). Docker overview. [online] Docker Documentation. Available at: https://docs.docker.com/get-started/overview/'},
+  {'id': 2, 'term': 'Kubernetes', 'Description': 'an open-source system for automating deployment, scaling, and management of containerized applications', 'reference':'Kubernetes (2019). Production-Grade Container Orchestration. [online] Kubernetes.io. Available at: https://kubernetes.io/.'},
+  {'id': 3, 'term': 'Terraform', 'Description': 'Open source infrastructure that allows you to manage and provision infrastructure in any cloud', 'reference':'HashiCorp (n.d.). Terraform by HashiCorp. [online] Terraform by HashiCorp. Available at: https://www.terraform.io/.'},
+  {'id': 4, 'term': 'Canary Deployment', 'Description': 'Rollout of an application splitting traffic between an already existing deployment and a new version, being rolled out to a subset of users before being rolled out fully', 'reference':'Google Cloud. (n.d.). Use a canary deployment strategy | Cloud Deploy. [online] Available at: https://cloud.google.com/deploy/docs/deployment-strategies/canary#:~:text=canary%20deployment%20strategy.- [Accessed 23 Jul. 2023].'},
+  {'id': 5, 'term': 'Blue/Green Deployment', 'Description': 'Deployment strategy where you create two seperate but identical environments, the blue one is running the current application and the green one the new application', 'reference':'docs.aws.amazon.com. (n.d.). Blue/Green Deployments - Overview of Deployment Options on AWS. [online] Available at: https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html.'},
+  {'id': 6, 'term': 'Git', 'Description': 'Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency', 'reference':'Git (2019). Git. [online] Git-scm.com. Available at: https://git-scm.com/.'},
+  {'id': 7, 'term': 'GitHub', 'Description': 'Git hosting service used for code sharing', 'reference':'Simplilearn.com. (n.d.). What is GitHub And How To Use It? [online] Available at: https://www.simplilearn.com/tutorials/git-tutorial/what-is-github.'},
+  {'id': 8, 'term': 'Jenkins', 'Description': 'an open source automation server which enables developers around the world to reliably build, test, and deploy their software.', 'reference':'Jenkins (n.d.). Jenkins. [online] Jenkins. Available at: https://www.jenkins.io/.'},
+  {'id': 9, 'term': 'Agile', 'Description': 'Software development model that focuses on continuous releases and incorporating customer feedback at every stage of development', 'reference':'Atlassian (2019). Get started with agile project management | Atlassian. [online] Atlassian. Available at: https://www.atlassian.com/agile/project-management.'},
+  {'id': 10, 'term': 'Version Control', 'Description': 'The practice of tracking and managing changes to software code', 'reference':'Atlassian (2019). What is version control. [online] Atlassian. Available at: https://www.atlassian.com/git/tutorials/what-is-version-control.'},
+  {'id': 11, 'term': 'Behaviour-Driven Deployment', 'Description': 'Test driven development focused on collaboration between development and business stakeholders that determines the development with human readable DSL.', 'reference':'Dz. Inc, “48 DevOps Terms You Should Know (A DevOps Glossary),” Medium, Jul. 24, 2017. https://medium.com/@DZoneInc/48-devops-terms-you-should-know-a-devops-glossary-37e60fd23752.'},
+  {'id': 12, 'term': 'Branching', 'Description': 'Duplication of an existing object so the same code can be used by other developers simultaneously', 'reference':'Dz. Inc, “48 DevOps Terms You Should Know (A DevOps Glossary),” Medium, Jul. 24, 2017. https://medium.com/@DZoneInc/48-devops-terms-you-should-know-a-devops-glossary-37e60fd23752'},
+  {'id': 13, 'term': 'Capacity Test', 'Description': 'A test to determine the maximum users a computer, server or application can hold before it fails', 'reference':'Dz. Inc, “48 DevOps Terms You Should Know (A DevOps Glossary),” Medium, Jul. 24, 2017. https://medium.com/@DZoneInc/48-devops-terms-you-should-know-a-devops-glossary-37e60fd23752'},
+  {'id': 14, 'term': 'Black Box Testing', 'Description': 'Functional testing where the internal design is tested without the tester knowing what the internal design is', 'reference':'“DevOps DevOps Terminology: A Glossary,” Plutora. https://www.plutora.com/devops-at-scale/terminology-glossary.'},
+  {'id': 15, 'term': 'DevSecOps', 'Description': 'Incorporating security into all stages of the development cycle and not just at the end', 'reference':'“DevOps DevOps Terminology: A Glossary,” Plutora. https://www.plutora.com/devops-at-scale/terminology-glossary'},
+  {'id': 16, 'term': 'Fail Fast', 'Description': 'A practice that emphasizes testing early and often to detect any abnormalities early on', 'reference':'“DevOps DevOps Terminology: A Glossary,” Plutora. https://www.plutora.com/devops-at-scale/terminology-glossary'},
+  {'id': 17, 'term': 'Kanban', 'Description': 'A visual workflow management method where tasks are written on sticky notes which slide from one column to another', 'reference':'“DevOps DevOps Terminology: A Glossary,” Plutora. https://www.plutora.com/devops-at-scale/terminology-glossary'},
+  {'id': 18, 'term': 'Lead Time', 'Description': 'A measurement of the total time passed from creation of work items to their completion', 'reference':'KathrynEE, “Cycle Time and Lead Time control charts - Azure DevOps Services,” learn.microsoft.com. https://learn.microsoft.com/en-us/azure/devops/report/dashboards/cycle-time-and-lead-time?view=azure-devops'},
+  {'id': 19, 'term': 'Pair Programming', 'Description': 'A technique where developers work in pairs and write code together', 'reference':'“What is Pair Programming?,” Software Quality. https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming#:~:text=Pair%20programming%20is%20a%20collaborative (accessed Aug. 05, 2023).'},
+  {'id': 20, 'term': 'Rollback', 'Description': 'Returning to a previous successful stage', 'reference':'“Rolling Back a Deployment,” docs.oracle.com. https://docs.oracle.com/en-us/iaas/Content/devops/using/deployment_rollback.htm#:~:text=In%20DevOps%2C%20deployments%20can%20be (accessed Aug. 05, 2023)'},
+
+];
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'DevOps Terms', words: wordList});
+});
+
+module.exports = router;

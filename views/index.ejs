@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+      <% words.forEach((word) => { %>
+        <tr>
+          <td>
+            <%= word.id %>
+          </td>
+          <td>
+            <%= word.term %>
+          </td>
+          <td>
+            <%= word.Description %>
+          </td>
+          <td>
+            <%= word.reference %>
+          </td>
+        </tr>
+        <%}) %>
+    </table>
+  </body>
+</html>
