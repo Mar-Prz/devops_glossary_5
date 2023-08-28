@@ -22,7 +22,15 @@ const wordList = [
   {'id': 18, 'term': 'Lead Time', 'Description': 'A measurement of the total time passed from creation of work items to their completion', 'reference':'KathrynEE, “Cycle Time and Lead Time control charts - Azure DevOps Services,” learn.microsoft.com. https://learn.microsoft.com/en-us/azure/devops/report/dashboards/cycle-time-and-lead-time?view=azure-devops'},
   {'id': 19, 'term': 'Pair Programming', 'Description': 'A technique where developers work in pairs and write code together', 'reference':'“What is Pair Programming?,” Software Quality. https://www.techtarget.com/searchsoftwarequality/definition/Pair-programming#:~:text=Pair%20programming%20is%20a%20collaborative (accessed Aug. 05, 2023).'},
   {'id': 20, 'term': 'Rollback', 'Description': 'Returning to a previous successful stage', 'reference':'“Rolling Back a Deployment,” docs.oracle.com. https://docs.oracle.com/en-us/iaas/Content/devops/using/deployment_rollback.htm#:~:text=In%20DevOps%2C%20deployments%20can%20be (accessed Aug. 05, 2023)'},
-
+  {'id': 21, 'term': 'Image', 'Description': 'Bootable snapshot of a server including the code and dependencies', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"},  
+  {'id': 22, 'term': 'Container', 'Description': 'A way of virtualising a server', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"}, 
+  {'id': 23, 'term': 'DockerFile', 'Description': 'A file with instructions on how to construct the image', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"}, 
+  {'id': 24, 'term': 'Alpine', 'Description': 'A lightweight Linux Distribution', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"}, 
+  {'id': 25, 'term': 'Ansible', 'Description': 'Automation engine for various IT tasks', 'reference': "DevOps glossary: 78 basic DevOps terms explained in simple words | IT Svit,” Jul. 12, 2018. https://itsvit.com/blog/devops-glossary-78-basic-devops-terms-in-simple-words/"}, 
+  {'id': 26, 'term': 'Bucket', 'Description': 'logical unit in Amazon S3 used for storing various types of objects', 'reference': 'DevOps glossary: 78 basic DevOps terms explained in simple words | IT Svit,” Jul. 12, 2018. https://itsvit.com/blog/devops-glossary-78-basic-devops-terms-in-simple-words/'}, 
+  {'id': 27, 'term': 'cluster', 'Description': 'set of interconnected units treated as a single entity', 'reference': '“100 DevOps Terms, or, What Does Your DevOps Say? - DZone,” dzone.com. https://dzone.com/articles/100-devops-terms-or-what-does-your-devops-say (accessed Aug. 28, 2023).'}, 
+  {'id': 29, 'term': 'Datadog', 'Description': 'efficient cloud monitoring service', 'reference': '“DevOps glossary: 78 basic DevOps terms explained in simple words | IT Svit,” Jul. 12, 2018. https://itsvit.com/blog/devops-glossary-78-basic-devops-terms-in-simple-words/'}, 
+  {'id': 30, 'term': 'Docker Compose', 'Description': 'A tool used for defining and sharing multiple container applications', 'reference': "“Use Docker Compose,” Docker Documentation, Aug. 23, 2022. https://docs.docker.com/get-started/08_using_compose/"} ,
 ];
 
 /* GET home page. */
