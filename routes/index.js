@@ -31,6 +31,16 @@ const wordList = [
   {'id': 27, 'term': 'cluster', 'Description': 'set of interconnected units treated as a single entity', 'reference': '“100 DevOps Terms, or, What Does Your DevOps Say? - DZone,” dzone.com. https://dzone.com/articles/100-devops-terms-or-what-does-your-devops-say (accessed Aug. 28, 2023).'}, 
   {'id': 29, 'term': 'Datadog', 'Description': 'efficient cloud monitoring service', 'reference': '“DevOps glossary: 78 basic DevOps terms explained in simple words | IT Svit,” Jul. 12, 2018. https://itsvit.com/blog/devops-glossary-78-basic-devops-terms-in-simple-words/'}, 
   {'id': 30, 'term': 'Docker Compose', 'Description': 'A tool used for defining and sharing multiple container applications', 'reference': "“Use Docker Compose,” Docker Documentation, Aug. 23, 2022. https://docs.docker.com/get-started/08_using_compose/"} ,
+  {'id': 31, 'term': 'Configuration Management', 'Description': 'The management of and maintenance of software and infrastructure', 'reference': "DevOps Terms: A to Z Glossary,” Coursera. https://www.coursera.org/collections/devops-terms (accessed Sep. 10, 2023)."} ,
+  {'id': 32, 'term': 'Command Line Interface', 'Description': 'CLI takes terraform commands and uses them to accept instructions and provide output', 'reference': "“Terraform Glossary | Terraform | HashiCorp Developer,” Terraform Glossary | Terraform | HashiCorp Developer. https://developer.hashicorp.com/terraform/docs/glossary#cli (accessed Sep. 10, 2023)."} ,
+  {'id': 33, 'term': 'HCL', 'Description': 'Hashicorp configuration language, syntax that is the basis for terraforms configuration language', 'reference': "“Terraform Glossary | Terraform | HashiCorp Developer,” Terraform Glossary | Terraform | HashiCorp Developer. https://developer.hashicorp.com/terraform/docs/glossary#cli (accessed Sep. 10, 2023)."} ,
+  {'id': 34, 'term': 'Infrastructure as Code', 'Description': 'Using code to build infrastructure rather than an interface', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"} ,
+  {'id': 35, 'term': 'Queue', 'Description': 'List of runs waiting to be processed', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"} ,
+  {'id': 36, 'term': 'Resource', 'Description': 'In terraform a blokc that describes one or many infrastructure objects', 'reference': "Davis.A, Bootstrapping Microservices with Docker, Kubernetes and Terraform"} ,
+  {'id': 37, 'term': 'KubeCtl', 'Description': 'The kubernetes command line tool', 'reference': "“Install Tools,” Kubernetes. https://kubernetes.io/docs/tasks/tools/#:~:text=kubectl (accessed Sep. 10, 2023)."} ,
+  {'id': 38, 'term': 'Cluster', 'Description': 'a group of nodes running containerised apps', 'reference': "“Glossary,” Kubernetes. https://kubernetes.io/docs/reference/glossary/?fundamental=true"} ,
+  {'id': 39, 'term': 'Node', 'Description': 'A worker machine in kubernetes', 'reference': "“Glossary,” Kubernetes. https://kubernetes.io/docs/reference/glossary/?fundamental=true"} ,
+  {'id': 40, 'term': 'Garbage Collection', 'Description': 'A collective term for the ways in which kubernetes cleans up cluster resources', 'reference': "“Glossary,” Kubernetes. https://kubernetes.io/docs/reference/glossary/?fundamental=true"} ,
 ];
 
 /* GET home page. */
